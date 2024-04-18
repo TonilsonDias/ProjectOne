@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --purple: #52BDE2;
+    --green: #15CDCB;
+    --dark: #212221;
+    --leght-grey: #E0DEDE;
+    --menu-height: 75px; 
+    --medium-grey: #2f3034;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+html, body{
+    margin: 0;
+    background: var(--dark);
+}
+
+body, button, input, select, textarea{
+    font-family:'Poppins', sans-serif;
+    color: white;
+}
+
+h1{ 
+    font-size: 44px;
+}
+
+h2{
+    font-size: 24px;
+}
+h1,h2{
+    margin: 0;
+    font-weight: 400;
+}
+P{
+   color: var(--leght-grey); 
+}
+
+button{
+   background: var(--purple);
+   border: 0;
+   border-radius: 16px;
+   padding: 8px 35px;
+   color: white;
+   font-weight: bold;
+   font-size: 18px;
+   cursor: pointer;
+}
+
+.secundary-button{
+    background: var(--medium-grey);
+    border: 1px solid var(--purple);
+    color: var(--green);
+    font-weight: bold;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+}
+
+.secundary-button img{
+  margin-right: 15px;
+}
+
+.title-purple{
+    color: var(--purple);
+}
+
+.title-green{
+    color: var(--green);
+}
+
+header{
+    height: calc(100vh - var(--menu-height));
+    display: flex;
+    align-items: center;
+}
+header .conteiner {
+    width: 50%;
+    height: fit-content;
+    padding: 0 100px;
+}
+header .conteiner img{
+    display: none;
+
+}
+
+header .conteiner button{
+    margin-top: 40px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    height: var(--menu-height);
+    background: var(--dark);
+    position: sticky;
+    top: 0;
+
+    z-index: 99;
+}
+
+nav img{
+    height: 45px;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul a{
+  font-size: 24px;
+  color: var(--green);
+  text-decoration: none;
+  
+}
+nav ul a svg {
+    display: none;
+}
+  
+.about-me{
+    display: flex;
+    padding: 100px;
+}
+
+.about-me .conteiner{
+    width: 50%;
+    padding-right: 50px;
+
+}
+
+.about-me .img-conteiner{
+    width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+.about-me .img-conteiner img{
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-me .img-conteiner .line{
+    width: calc(70% + 50px);
+    height: calc(100% + 50px);
+    border: 1px solid var(--purple);
+
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 70%/2 - 25px);
+
+}
+
+.about-me .img-conteiner .line.green{
+    transform: rotate(-3.3deg);
+    color: var(--green);
+    
+}
+
+.services{
+    text-align: center;
+    margin: 150px 0;
+    padding: 0 100px;
+}
+
+.services-conteiner, .portfolio-conteiner {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 60px auto 0;
+}
+.services .services-conteiner .service-card{
+    max-width: 360px;
+    background: #2f3034;
+    border: 1px solid var(--purple);
+    border-radius: 16px;
+    padding: 40px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.services .services-conteiner .service-card img{
+    margin-bottom: 40px;
+    width: 90px;
+}
+
+.service-card + .service-card{
+    margin-left: 10px;
+}
+
+.portfolio{
+    padding: 0 100px;
+    height: 800px;
+    margin-bottom: 100px;
+    text-align: center;
+    background: url("asest/portfolio-bg.png");
+}
+
+.portfolio .portfolio-conteiner{
+    margin-top: 130px;
+}
+
+.portfolio .portfolio-conteiner .portfolio-card{
+    background: radial-gradient(108% 108% at 0% 0%, rgb(255, 255, 255, 0.33) 0%, rgb(255, 255, 255, 0.33) 100%);
+    box-shadow: 0px 4px 24px - 1px rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(42px);
+    border: 1px solid #fff;
+
+
+    border-radius: 16px;
+    max-width: 360px;
+    text-align: left;
+    padding: 25px 50px;
+
+}
+
+.portfolio .portfolio-conteiner .portfolio-card .img-conteiner{
+    margin: 0px 25px 50px;
+    position: relative;
+}
+
+.portfolio .portfolio-conteiner .portfolio-card .img-conteiner img{
+    width: 100%;
+}
+
+.portfolio-conteiner .portfolio-card .img-conteiner .line  {
+    width: calc(110% + 24px);
+    height: calc(100% + 12px);
+    border: 1px solid var(--green);
+    border-radius: 15px;
+    transform: rotate(-1.93deg);
+
+    position: absolute;
+    top: -12px;
+    left: calc(50% - 100%/2 - 25px);
+
+
+}
+   
+
+.portfolio .portfolio-conteiner .portfolio-card .lingue-conteiner{
+    margin-bottom: 20px;
+}
+ 
+.portfolio .portfolio-conteiner .portfolio-card .lingue-conteiner ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+}
+.portfolio .portfolio-conteiner .portfolio-card .lingue-conteiner ul li{
+    color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 16px;
+    padding: 3px 8px;
+    
+    
+}
+
+.portfolio-card .lingue-conteiner ul li + li{
+    margin-left: 10px;
+}
+
+.portfolio-card + .portfolio-card{
+    margin-left: 10px;
+}
+
+.portfolio-card p{
+    margin: 0;
+}
+
+.curriculum{
+    padding: 0 100px;
+    text-align: center;
+}
+
+.curriculum .conteiner{
+    display: flex;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.curriculum .conteiner .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    align-items: center;
+   
+}
+
+.curriculum .conteiner .content .curriculum-info{
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-gap: 1rem;
+    margin-bottom: 50px;
+}
+
+.contacto{
+    max-width: 800px;
+    margin: 150px auto 70px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.contacto h1{
+    width: fit-content;
+    margin: 0 auto 40px;
+    background: -webkit-linear-gradient(#15CDCB, #52BDE2);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contacto button{
+    margin: 40px auto;
+}
+
+.contacto .social-midia{
+    max-width: 360px;
+    margin: 50px  auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer p{
+    text-align: center;
+}
+
+/* Resposividade*/
+
+/* Para pcs pequenos*/
+@media (max-width:1000px){
+       
+    header .conteiner{
+        width: 100%; 
+    }
+    nav ul a {
+        font-size: 18px;
+    }
+    nav {
+        padding: 0 30px;
+    }
+
+    .about-me{
+        flex-direction: column;
+        
+    }
+
+    .about-me .conteiner, .about-me .img-conteiner {
+        width: 100% ;
+        
+    }
+
+    .about-me{
+        padding-right: 0;
+    }
+
+    .about-me .img-conteiner{
+        margin: 70px 0;
+    }
+
+    .services, .portfolio{
+        padding: 0;
+    }
+
+    .services .services-conteiner, .portfolio .portfolio-conteiner {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card{
+        height: 394px;
+    }
+
+    .service-card + .service-card, .portfolio-card + .portfolio-card{
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .portfolio {
+        height: 100%;
+    }
+
+    .curriculum .conteiner{
+        flex-wrap: wrap;
+    }
+
+    .curriculum .conteiner .curriculum-img{
+        display: block;
+        margin: 0 auto 50px;
+        width: 100%;
+        max-width: 520px;
+    }
+
+    
+}
+
+/* tablet */
+
+ @media (max-width: 767px){
+ 
+    header .conteiner img{
+        display: inline;
+        margin-bottom: 70px;
+    }
+
+  
+    nav img{
+        display: none;
+    }
+    nav ul{
+        padding: 0;
+    }
+    nav ul a{
+        font-size: 16px;
+    }
+ }
+
+
+ /* Telefones*/
+
+ @media (max-width: 480px){
+    body{
+        margin-bottom: calc(var(--menu-height) + 50px)
+    }
+    header .conteiner{
+        padding: 0 40px;
+    }
+    nav {
+        position: fixed;
+        width: 100%;
+        top: unset;
+        bottom: 0;
+        padding: o 15px;
+    }
+    nav ul a {
+        font-size: 12px;
+    }
+    nav ul a svg{
+        display: block;
+        margin: 0 auto 10px;
+    }
+    
+    .about-me{
+        padding: 40px;
+    }
+
+    .services{
+        margin: 70px 0;
+    }
+    .services-conteiner, .portfolio-conteiner{
+        padding: 0 20px;
+    }
+
+    .portfolio .portfolio-conteiner{
+        margin-top: 70px;
+    }
+
+    .portfolio{
+        margin: 100px 0 50px;
+    }
+
+    .curriculum{
+        padding: 0 20px;
+    }
+
+    .curriculum .conteiner .content .curriculum-info{
+        padding: 0 15px;
+    }
+    
+    .contacto {
+        padding: 0 15px;
+    }
+ }
